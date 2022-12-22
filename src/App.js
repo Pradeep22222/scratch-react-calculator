@@ -5,7 +5,7 @@ import { Display } from './components/Display';
 function App() {
   return (
     <div>
-      <div class="wrapper">
+      <div className="wrapper">
       <Display></Display>
      <ButtonArea></ButtonArea>
     </div>

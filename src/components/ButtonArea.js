@@ -1,27 +1,96 @@
-import React from 'react'
+import React from "react";
+import { Button } from "./Button";
 
 export const ButtonArea = () => {
+  const buttonList = [
+    {
+      class: "box-AC",
+      label: "AC",
+    },
+    {
+      class: "pdm",
+      label: "C",
+    },
+    {
+      class: "box-percent",
+      label: "%",
+    },
+    {
+      class: "box-divide",
+      label: "/",
+    },
+    {
+      class: "box-7",
+      label: "7",
+    },
+    {
+      class: "box-8",
+      label: "8",
+    },
+    {
+      class: "box-9",
+      label: "9",
+    },
+    {
+      class: "box-x",
+      label: "*",
+    },
+    {
+      class: "box-4",
+      label: "4",
+    },
+    {
+      class: "box-5",
+      label: "5",
+    },
+    {
+      class: "box-6",
+      label: "6",
+    },
+    {
+      class: "box-minus",
+      label: "-",
+    },
+    {
+      class: "box-1",
+      label: "1",
+    },
+    {
+      class: "box-2",
+      label: "2",
+    },
+    {
+      class: "box-3",
+      label: "3",
+    },
+    {
+      class: "box-plus",
+      label: "+",
+    },
+    {
+      class: "box-zero",
+      label: "0",
+    },
+    {
+      class: "box-dot",
+      label: ".",
+    },
+    {
+      class: "box-equals",
+      label: "=",
+    },
+  ];
   return (
     <>
-      <div class="box box-AC">AC</div>
-      <div class="box pdm">C</div>
-      <div class="box box-percent">%</div>
-      <div class="box box-divide">/</div>
-      <div class="box box-7">7</div>
-      <div class="box box-8">8</div>
-      <div class="box box-9">9</div>
-      <div class="box box-x">*</div>
-      <div class="box box-4">4</div>
-      <div class="box box-5">5</div>
-      <div class="box box-6">6</div>
-      <div class="box box-minus">-</div>
-      <div class="box box-1">1</div>
-      <div class="box box-2">2</div>
-      <div class="box box-3">3</div>
-      <div class="box box-plus">+</div>
-      <div class="box box-zero">0</div>
-      <div class="box box-dot">.</div>
-      <div class="box box-equals">=</div>
+      {buttonList.map((item, i) => {
+        return (
+          <Button
+            key={i}
+            className={"box " + item.class}
+            label={item.label}
+          ></Button>
+        );
+      })}
     </>
   );
-}
+};
