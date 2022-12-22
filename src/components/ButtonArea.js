@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "./Button";
 
-export const ButtonArea = () => {
+export const ButtonArea = ({ handleOnClick }) => {
   const buttonList = [
     {
       class: "box-AC",
@@ -88,6 +88,7 @@ export const ButtonArea = () => {
             key={i}
             className={"box " + item.class}
             label={item.label}
+            handleOnClick={handleOnClick}
           ></Button>
         );
       })}
